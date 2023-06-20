@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/menu_language"
+        android:icon="@drawable/ic_language"
+        android:title="Language" />
+
+    <item
+        android:id="@+id/menu_developer"
+        android:icon="@drawable/ic_developer"
+        android:title="Developer" />
+
+    <item
+        android:id="@+id/menu_privacy"
+        android:icon="@drawable/ic_privacy"
+        android:title="Privacy Policy" />
+
+    <item
+        android:id="@+id/menu_share"
+        android:icon="@drawable/ic_share"
+        android:title="Share Apps" />
+
+    <item
+        android:id="@+id/menu_apps"
+        android:icon="@drawable/ic_android"
+        android:title="Our Apps" />
+
+</menu>
