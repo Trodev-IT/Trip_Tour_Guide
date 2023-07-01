@@ -13,8 +13,10 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
@@ -28,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     private NavigationView navigationView;
     private long pressedTime;
 
+    LinearLayout banLl;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +41,9 @@ public class MainActivity extends AppCompatActivity {
         /*init all drawer layout*/
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.navigation_view);
+
+        /*init all views id*/
+        banLl = findViewById(R.id.banLl);
 
 
         // #######################
@@ -50,8 +57,17 @@ public class MainActivity extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(this::onOptionsItemSelected);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
-    }
 
+        /*set all click listener*/
+        banLl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, BangladeshActivity.class));
+                Toast.makeText(MainActivity.this, "Visit Bangladesh all places", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+    }
 
     @SuppressLint("NonConstantResourceId")
     @Override

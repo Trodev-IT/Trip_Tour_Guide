@@ -28,7 +28,7 @@
     <style name="Theme.Convertix.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="NavigationMenuViewStyle" parent="android:Widget.TextView">
-        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:fontFamily">@font/zilla_slab_semi_bold</item>
     </style>
 
     <!-- ProgressBar. -->
