@@ -4,12 +4,15 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -23,9 +26,14 @@ import com.google.android.material.navigation.NavigationView;
 
 import java.util.Objects;
 
+import me.ibrahimsn.lib.OnItemSelectedListener;
+import me.ibrahimsn.lib.SmoothBottomBar;
+
 public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
+
+    SmoothBottomBar smoothBottomBar;
     private ActionBarDrawerToggle toggle;
     private NavigationView navigationView;
     private long pressedTime;
@@ -42,8 +50,8 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.navigation_view);
 
-        /*init all views id*/
-        banLl = findViewById(R.id.banLl);
+        /*init views*/
+        smoothBottomBar = findViewById(R.id.bottombar);
 
 
         // #######################
@@ -58,12 +66,68 @@ public class MainActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
 
-        /*set all click listener*/
-        banLl.setOnClickListener(new View.OnClickListener() {
+        /*When apps start show HomeFragments*/
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frameLayout, new HomeFragment());
+        fragmentTransaction.commit();
+
+
+        /*set all status bar, navigation bar, toolbar color*/
+        smoothBottomBar.setBarBackgroundColor(Color.parseColor("#2196F3"));
+        getWindow().setNavigationBarColor(Color.parseColor("#2196F3"));
+        getWindow().setStatusBarColor(Color.parseColor("#2196F3"));
+
+
+
+        /*smooth bar working process*/
+        smoothBottomBar.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, BangladeshActivity.class));
-                Toast.makeText(MainActivity.this, "Visit Bangladesh all places", Toast.LENGTH_SHORT).show();
+            public boolean onItemSelect(int i) {
+
+                if (i == 0) {
+                    setTitle("Dashboard");
+                    FragmentManager fragmentManager = getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    fragmentTransaction.replace(R.id.frameLayout, new HomeFragment());
+                    fragmentTransaction.commit();
+
+                    /*set all status bar, navigation bar, toolbar color*/
+                    smoothBottomBar.setBarBackgroundColor(Color.parseColor("#2196F3"));
+                    getWindow().setNavigationBarColor(Color.parseColor("#2196F3"));
+                    getWindow().setStatusBarColor(Color.parseColor("#2196F3"));
+
+                }
+
+                if (i == 1) {
+                    setTitle("Tour Group");
+                    FragmentManager fragmentManager = getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    fragmentTransaction.replace(R.id.frameLayout, new TourGroupFragment());
+                    fragmentTransaction.commit();
+
+                    /*set all status bar, navigation bar, toolbar color*/
+                    smoothBottomBar.setBarBackgroundColor(Color.parseColor("#2196F3"));
+                    getWindow().setNavigationBarColor(Color.parseColor("#2196F3"));
+                    getWindow().setStatusBarColor(Color.parseColor("#2196F3"));
+
+
+                }
+
+                if (i == 2) {
+                    setTitle("Weather");
+                    FragmentManager fragmentManager = getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    fragmentTransaction.replace(R.id.frameLayout, new WeatherFragment());
+                    fragmentTransaction.commit();
+
+                    /*set all status bar, navigation bar, toolbar color*/
+                    smoothBottomBar.setBarBackgroundColor(Color.parseColor("#2196F3"));
+                    getWindow().setNavigationBarColor(Color.parseColor("#2196F3"));
+                    getWindow().setStatusBarColor(Color.parseColor("#2196F3"));
+                }
+
+                return false;
             }
         });
 
@@ -90,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
             dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
             dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
             dialog.getWindow().setGravity(Gravity.BOTTOM);
-        }  else if (itemId == R.id.menu_language) {
+        } else if (itemId == R.id.menu_language) {
 
         } else if (itemId == R.id.menu_privacy) {
             Toast.makeText(this, "Privacy Policy", Toast.LENGTH_SHORT).show();
