@@ -80,7 +80,7 @@
                 android:weightSum="3">
 
                 <LinearLayout
-
+                    android:id="@+id/dhakaLl"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -111,7 +111,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:fontFamily="@font/zilla_slab_regular"
-                        android:text="Bangladesh"
+                        android:text="Dhaka"
+                        android:textStyle="bold"
                         android:textColor="@color/black" />
 
                 </LinearLayout>
@@ -147,7 +148,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:fontFamily="@font/zilla_slab_regular"
-                        android:text="India"
+                        android:text="Rajshahi"
+                        android:textStyle="bold"
                         android:textColor="@color/black" />
 
                 </LinearLayout>
@@ -183,7 +185,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:fontFamily="@font/zilla_slab_regular"
-                        android:text="Nepal"
+                        android:text="Sylhet"
+                        android:textStyle="bold"
                         android:textColor="@color/black" />
 
                 </LinearLayout>
@@ -219,7 +222,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:fontFamily="@font/zilla_slab_regular"
-                        android:text="Bangladesh"
+                        android:text="Chittagong"
                         android:textColor="@color/black" />
 
                 </LinearLayout>
@@ -255,7 +258,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:fontFamily="@font/zilla_slab_regular"
-                        android:text="India"
+                        android:text="Khulna"
+                        android:textStyle="bold"
                         android:textColor="@color/black" />
 
                 </LinearLayout>
@@ -291,7 +295,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:fontFamily="@font/zilla_slab_regular"
-                        android:text="Nepal"
+                        android:text="Barishal"
+                        android:textStyle="bold"
                         android:textColor="@color/black" />
 
                 </LinearLayout>
@@ -301,4 +306,5 @@
         </HorizontalScrollView>
 
     </LinearLayout>
+
 </LinearLayout>
