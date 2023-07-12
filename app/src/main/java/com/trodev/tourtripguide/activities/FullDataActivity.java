@@ -11,9 +11,9 @@ import com.trodev.tourtripguide.R;
 
 public class FullDataActivity extends AppCompatActivity {
 
-    TextView nameTv, shortbioTv, historyheadTv, historybioTv;
+    TextView nameTv, shortbioTv, historyheadTv, historybioTv, ticketTv, ticketbioTv, wheretogoTv;
     ImageView imageIv;
-    String name, shortbio, historyhead, historybio, image;
+    String name, shortbio, historyhead, historybio,  ticket, ticketbio, wheretogo, image;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,13 +25,25 @@ public class FullDataActivity extends AppCompatActivity {
         shortbioTv = findViewById(R.id.shortbio);
         historyheadTv = findViewById(R.id.historyhead);
         historybioTv = findViewById(R.id.historybio);
+        ticketTv = findViewById(R.id.ticketTv);
+        ticketbioTv = findViewById(R.id.ticketbioTv);
+        wheretogoTv = findViewById(R.id.wheretogoTv);
         imageIv = findViewById(R.id.image);
+
+
 
         /*get data from custom adapter*/
         name = getIntent().getStringExtra("name");
         shortbio = getIntent().getStringExtra("shortbio");
         historyhead = getIntent().getStringExtra("historyhead");
         historybio = getIntent().getStringExtra("historybio");
+
+        /*ticket & where to go place get data from adapter*/
+        ticket = getIntent().getStringExtra("ticket");
+        ticketbio = getIntent().getStringExtra("ticketbio");
+        wheretogo = getIntent().getStringExtra("wheretogo");
+
+        /*place image get on adapter*/
         image = getIntent().getStringExtra("img");
 
         /*get image on json data*/
@@ -47,6 +59,9 @@ public class FullDataActivity extends AppCompatActivity {
         shortbioTv.setText(shortbio);
         historyheadTv.setText(historyhead);
         historybioTv.setText(historybio);
+        ticketTv.setText(ticket);
+        ticketbioTv.setText(ticketbio);
+        wheretogoTv.setText(wheretogo);
 
     }
 }

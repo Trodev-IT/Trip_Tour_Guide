@@ -23,7 +23,7 @@
             android:name=".activities.FullDataActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.BangladeshActivity"
+            android:name=".activities.DhakaActivity"
             android:exported="false" />
         <activity
             android:name=".activities.MainActivity"

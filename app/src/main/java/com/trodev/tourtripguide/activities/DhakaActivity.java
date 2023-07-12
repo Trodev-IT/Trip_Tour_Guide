@@ -23,7 +23,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BangladeshActivity extends AppCompatActivity {
+public class DhakaActivity extends AppCompatActivity {
     private static final String json_url = "https://zobayer-dev-e12aa.web.app/dhaka_place.json";
     RecyclerView recyclerView;
     List<ModelClass> list;
@@ -32,7 +32,7 @@ public class BangladeshActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bangladesh);
+        setContentView(R.layout.activity_dhaka);
 
         getSupportActionBar().hide();
 
@@ -106,11 +106,17 @@ public class BangladeshActivity extends AppCompatActivity {
                     /*set data on recyclerview*/
                     modelClass.setName(jsonObject1.getString("name"));
 
-                    modelClass.setHistoryhead(jsonObject1.getString("historyhead"));
-
                     modelClass.setHistorybio(jsonObject1.getString("historybio"));
 
+                    modelClass.setHistoryhead(jsonObject1.getString("historyhead"));
+
                     modelClass.setShortbio(jsonObject1.getString("shortbio"));
+
+                    modelClass.setTicket(jsonObject1.getString("ticket"));
+
+                    modelClass.setTicketbio(jsonObject1.getString("ticketbio"));
+
+                    modelClass.setWheretogo(jsonObject1.getString("wheretogo"));
 
                     modelClass.setImg(jsonObject1.getString("image"));
 

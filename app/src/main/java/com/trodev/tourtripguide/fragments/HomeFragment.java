@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.trodev.tourtripguide.R;
-import com.trodev.tourtripguide.activities.BangladeshActivity;
+import com.trodev.tourtripguide.activities.DhakaActivity;
 
 
 public class HomeFragment extends Fragment {
@@ -36,7 +36,7 @@ public class HomeFragment extends Fragment {
         dhakaLl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), BangladeshActivity.class));
+                startActivity(new Intent(getContext(), DhakaActivity.class));
             }
         });
 

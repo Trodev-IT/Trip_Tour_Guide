@@ -12,6 +12,7 @@
         android:layout_margin="10dp"
         android:orientation="vertical">
 
+        <!--part one-->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="130dp"
@@ -67,6 +68,42 @@
 
         </com.google.android.material.card.MaterialCardView>
 
+        <!--part two-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="3dp"
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/map_pin"
+                    app:tint="#2196F3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mulish_semibold"
+                    android:text="Top Places of Division"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="3dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!--part three-->
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -110,7 +147,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:fontFamily="@font/zilla_slab_regular"
+                        android:fontFamily="@font/mulish_semibold"
                         android:text="Dhaka"
                         android:textColor="@color/black"
                         android:textStyle="bold" />
@@ -147,7 +184,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:fontFamily="@font/zilla_slab_regular"
+                        android:fontFamily="@font/mulish_semibold"
                         android:text="Rajshahi"
                         android:textColor="@color/black"
                         android:textStyle="bold" />
@@ -184,7 +221,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:fontFamily="@font/zilla_slab_regular"
+                        android:fontFamily="@font/mulish_semibold"
                         android:text="Sylhet"
                         android:textColor="@color/black"
                         android:textStyle="bold" />
@@ -221,7 +258,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:fontFamily="@font/zilla_slab_regular"
+                        android:fontFamily="@font/mulish_semibold"
                         android:text="Chittagong"
                         android:textColor="@color/black" />
 
@@ -257,7 +294,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:fontFamily="@font/zilla_slab_regular"
+                        android:fontFamily="@font/mulish_semibold"
                         android:text="Khulna"
                         android:textColor="@color/black"
                         android:textStyle="bold" />
@@ -294,7 +331,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:fontFamily="@font/zilla_slab_regular"
+                        android:fontFamily="@font/mulish_semibold"
                         android:text="Barishal"
                         android:textColor="@color/black"
                         android:textStyle="bold" />

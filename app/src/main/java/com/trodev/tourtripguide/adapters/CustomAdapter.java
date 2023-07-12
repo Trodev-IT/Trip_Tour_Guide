@@ -45,6 +45,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         holder.nameTv.setText(list.get(position).name);
         holder.shortbioTv.setText(list.get(position).shortbio);
 
+
         Glide
                 .with(context)
                 .load(list.get(position).getImg())
@@ -62,6 +63,12 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                 intent.putExtra("shortbio", list.get(position).shortbio);
                 intent.putExtra("historyhead", list.get(position).historyhead);
                 intent.putExtra("historybio", list.get(position).historybio);
+
+                intent.putExtra("ticket", list.get(position).ticket);
+                intent.putExtra("ticketbio", list.get(position).ticketbio);
+                intent.putExtra("wheretogo", list.get(position).wheretogo);
+
+
                 intent.putExtra("img", list.get(position).getImg());
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
