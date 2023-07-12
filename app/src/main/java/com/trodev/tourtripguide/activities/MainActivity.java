@@ -9,8 +9,11 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
+import android.content.ActivityNotFoundException;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -149,14 +152,16 @@ public class MainActivity extends AppCompatActivity {
             dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
             dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
             dialog.getWindow().setGravity(Gravity.BOTTOM);
-        } else if (itemId == R.id.menu_language) {
-
-        } else if (itemId == R.id.menu_privacy) {
+        }  else if (itemId == R.id.menu_privacy) {
+            startActivity(new Intent(MainActivity.this, PrivacyPolicyActivity.class));
             Toast.makeText(this, "Privacy Policy", Toast.LENGTH_SHORT).show();
-        } else if (itemId == R.id.menu_share) {
-            Toast.makeText(this, "Share Our Apps", Toast.LENGTH_SHORT).show();
-        } else if (itemId == R.id.menu_apps) {
+        }  else if (itemId == R.id.menu_apps) {
             Toast.makeText(this, "Our Apps", Toast.LENGTH_SHORT).show();
+            try {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/dev?id=6580660399707616800")));
+            } catch (ActivityNotFoundException e) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/dev?id=6580660399707616800")));
+            }
         }
 
         return super.onOptionsItemSelected(item);

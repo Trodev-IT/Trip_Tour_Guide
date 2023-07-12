@@ -15,7 +15,6 @@ import com.trodev.tourtripguide.activities.DhakaActivity;
 
 
 public class HomeFragment extends Fragment {
-
     LinearLayout dhakaLl;
 
     public HomeFragment() {

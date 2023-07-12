@@ -34,7 +34,9 @@ public class DhakaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dhaka);
 
-        getSupportActionBar().hide();
+        // set title in activity
+        getSupportActionBar().setTitle("Top Place of Dhaka Division");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         /*init views*/
         recyclerView = findViewById(R.id.dataRv);

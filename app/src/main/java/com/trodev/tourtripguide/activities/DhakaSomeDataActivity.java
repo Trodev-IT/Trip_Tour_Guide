@@ -9,7 +9,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.trodev.tourtripguide.R;
 
-public class FullDataActivity extends AppCompatActivity {
+public class DhakaSomeDataActivity extends AppCompatActivity {
 
     TextView nameTv, shortbioTv, historyheadTv, historybioTv, ticketTv, ticketbioTv, wheretogoTv;
     ImageView imageIv;
@@ -18,7 +18,12 @@ public class FullDataActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_full_data);
+        setContentView(R.layout.activity_dhaka_some_data);
+
+        // set title in activity
+        getSupportActionBar().setTitle("Read Details");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         /*init views*/
         nameTv = findViewById(R.id.name);
@@ -29,7 +34,6 @@ public class FullDataActivity extends AppCompatActivity {
         ticketbioTv = findViewById(R.id.ticketbioTv);
         wheretogoTv = findViewById(R.id.wheretogoTv);
         imageIv = findViewById(R.id.image);
-
 
 
         /*get data from custom adapter*/
@@ -48,7 +52,7 @@ public class FullDataActivity extends AppCompatActivity {
 
         /*get image on json data*/
         Glide
-                .with(FullDataActivity.this)
+                .with(DhakaSomeDataActivity.this)
                 .load(image)
                 .centerCrop()
                 .placeholder(R.drawable.ic_hone)

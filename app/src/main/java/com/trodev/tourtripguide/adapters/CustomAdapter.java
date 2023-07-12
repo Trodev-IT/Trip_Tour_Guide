@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.trodev.tourtripguide.models.ModelClass;
 import com.trodev.tourtripguide.R;
-import com.trodev.tourtripguide.activities.FullDataActivity;
+import com.trodev.tourtripguide.activities.DhakaSomeDataActivity;
 
 import java.util.List;
 
@@ -58,7 +58,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(context, FullDataActivity.class);
+                Intent intent = new Intent(context, DhakaSomeDataActivity.class);
                 intent.putExtra("name", list.get(position).name);
                 intent.putExtra("shortbio", list.get(position).shortbio);
                 intent.putExtra("historyhead", list.get(position).historyhead);
