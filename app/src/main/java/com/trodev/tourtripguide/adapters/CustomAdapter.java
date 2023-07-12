@@ -1,4 +1,4 @@
-package com.trodev.tourtripguide;
+package com.trodev.tourtripguide.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +13,9 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.trodev.tourtripguide.models.ModelClass;
+import com.trodev.tourtripguide.R;
+import com.trodev.tourtripguide.activities.FullDataActivity;
 
 import java.util.List;
 

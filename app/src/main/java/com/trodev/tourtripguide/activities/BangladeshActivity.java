@@ -1,21 +1,17 @@
-package com.trodev.tourtripguide;
+package com.trodev.tourtripguide.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.Dialog;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
-import android.widget.Toast;
+
+import com.trodev.tourtripguide.adapters.CustomAdapter;
+import com.trodev.tourtripguide.models.ModelClass;
+import com.trodev.tourtripguide.R;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

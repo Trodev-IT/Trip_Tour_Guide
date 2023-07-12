@@ -1,10 +1,12 @@
-package com.trodev.tourtripguide;
+package com.trodev.tourtripguide.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.trodev.tourtripguide.R;
 
 public class SplashScreen extends AppCompatActivity {
 

@@ -20,16 +20,16 @@
 
 
         <activity
-            android:name=".FullDataActivity"
+            android:name=".activities.FullDataActivity"
             android:exported="false" />
         <activity
-            android:name=".BangladeshActivity"
+            android:name=".activities.BangladeshActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".activities.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

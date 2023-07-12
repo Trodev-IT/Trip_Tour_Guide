@@ -1,4 +1,4 @@
-package com.trodev.tourtripguide;
+package com.trodev.tourtripguide.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -9,20 +9,21 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+import com.trodev.tourtripguide.fragments.HomeFragment;
+import com.trodev.tourtripguide.R;
+import com.trodev.tourtripguide.fragments.TourGroupFragment;
+import com.trodev.tourtripguide.fragments.WeatherFragment;
 
 import java.util.Objects;
 
@@ -30,16 +31,11 @@ import me.ibrahimsn.lib.OnItemSelectedListener;
 import me.ibrahimsn.lib.SmoothBottomBar;
 
 public class MainActivity extends AppCompatActivity {
-
     private DrawerLayout drawerLayout;
-
     SmoothBottomBar smoothBottomBar;
     private ActionBarDrawerToggle toggle;
     private NavigationView navigationView;
     private long pressedTime;
-
-    LinearLayout banLl;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
         smoothBottomBar.setBarBackgroundColor(Color.parseColor("#2196F3"));
         getWindow().setNavigationBarColor(Color.parseColor("#2196F3"));
         getWindow().setStatusBarColor(Color.parseColor("#2196F3"));
-
 
 
         /*smooth bar working process*/
