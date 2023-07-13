@@ -152,7 +152,11 @@ public class MainActivity extends AppCompatActivity {
             dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
             dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
             dialog.getWindow().setGravity(Gravity.BOTTOM);
-        }  else if (itemId == R.id.menu_privacy) {
+        } else if (itemId ==R.id.menu_ticket_manager) {
+            Toast.makeText(this, "Keep your ticket safe", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(MainActivity.this, TicketManagerActivity.class));
+
+        } else if (itemId == R.id.menu_privacy) {
             startActivity(new Intent(MainActivity.this, PrivacyPolicyActivity.class));
             Toast.makeText(this, "Privacy Policy", Toast.LENGTH_SHORT).show();
         }  else if (itemId == R.id.menu_apps) {

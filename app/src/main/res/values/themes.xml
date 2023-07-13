@@ -1,9 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.TourTripGuide" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-
+        
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -14,7 +12,7 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+
     </style>
 
 
@@ -27,11 +25,13 @@
 
     <style name="Theme.Convertix.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <!--navigation menu font family-->
     <style name="NavigationMenuViewStyle" parent="android:Widget.TextView">
         <item name="android:fontFamily">@font/zilla_slab_semi_bold</item>
     </style>
 
-    <!-- ProgressBar. -->
+
+    <!-- ProgressBar Color. -->
     <style name="ProgressBar">
         <item name="colorSecondary">@color/black</item>
     </style>
