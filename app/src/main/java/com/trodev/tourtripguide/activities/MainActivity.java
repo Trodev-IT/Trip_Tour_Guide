@@ -19,14 +19,13 @@ import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 import com.trodev.tourtripguide.fragments.HomeFragment;
 import com.trodev.tourtripguide.R;
 import com.trodev.tourtripguide.fragments.TourGroupFragment;
-import com.trodev.tourtripguide.fragments.WeatherFragment;
+import com.trodev.tourtripguide.WeatherFragment;
 
 import java.util.Objects;
 

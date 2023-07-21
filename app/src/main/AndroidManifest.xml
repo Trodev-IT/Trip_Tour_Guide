@@ -17,12 +17,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TourTripGuide"
         tools:targetApi="31">
-
-
+        <activity
+            android:name=".CityFinderActivity"
+            android:exported="false"
+            android:parentActivityName=".activities.MainActivity"/>
         <activity
             android:name=".activities.TicketManagerActivity"
             android:exported="false"
-            android:parentActivityName=".activities.MainActivity"/>
+            android:parentActivityName=".activities.MainActivity" />
         <activity
             android:name=".activities.PrivacyPolicyActivity"
             android:exported="false"
@@ -47,8 +49,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
     </application>
 
 </manifest>

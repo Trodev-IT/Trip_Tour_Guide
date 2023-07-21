@@ -10,6 +10,8 @@
     <color name="teal_200">#2196F3</color>
     <color name="teal_700">#2196F3</color>
 
+    <color name="app_color">#2196F3</color>
+
 
     <color name="atomic_steel_blue">#F0F1F1</color>
     <color name="seagull_blue">#769ABE</color>
