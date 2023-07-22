@@ -12,9 +12,9 @@
         android:icon="@drawable/ic_tour"
         android:title="Tour Group" />
 
-    <item
+<!--    <item
         android:id="@+id/menu_setting"
         android:icon="@drawable/nav_weather"
-        android:title="Weather News" />
+        android:title="Weather News" />-->
 
 </menu>

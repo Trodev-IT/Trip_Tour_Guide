@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CityFinderActivity">
+    tools:context=".activities.CityFinderActivity">
 
 
     <androidx.cardview.widget.CardView
@@ -25,14 +25,15 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
-                android:src="@drawable/city" />
+                android:src="@drawable/nav_weather"
+                app:tint="@color/app_color" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/kalpurush"
                 android:gravity="center"
-                android:text="আপনি যেখানে ভ্রমন করুন না কেন আপনি প্রথমেই সেইখানের আবহাওয়া জেনে নিন"
+                android:text="আপনি যে স্থানটির আবহাওয়া তথ্য জানতে চাচ্ছেন সেই জায়গাটির নাম লিখুন"
                 android:textColor="@color/black"
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
@@ -43,19 +44,42 @@
     </androidx.cardview.widget.CardView>
 
     <EditText
-        android:id="@+id/searchCity"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:background="@drawable/edittext_design"
-        android:fontFamily="@font/zilla_slab_semi_bold"
-        android:gravity="center_vertical|center_horizontal"
         android:hint="Enter City Name"
-        android:imeOptions="actionGo"
+        android:layout_marginLeft="30dp"
+        android:textSize="20sp"
+        android:background="@drawable/edittext_design"
         android:textColor="@color/black"
-        android:textSize="20sp" />
+        android:imeOptions="actionGo"
+        android:id="@+id/searchCity"
+        android:inputType="textAutoCorrect"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_marginRight="30dp">
+
+    </EditText>
+
+    <RelativeLayout
+        android:id="@+id/done"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/button_design">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Proceed"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
 
 </RelativeLayout>

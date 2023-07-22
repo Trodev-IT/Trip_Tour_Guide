@@ -7,6 +7,11 @@
         android:title="Ticket Manager" />
 
     <item
+        android:id="@+id/menu_weather"
+        android:icon="@drawable/nav_weather"
+        android:title="Weather" />
+
+    <item
         android:id="@+id/menu_developer"
         android:icon="@drawable/ic_developer"
         android:title="Developer" />

@@ -25,7 +25,6 @@ import com.google.android.material.navigation.NavigationView;
 import com.trodev.tourtripguide.fragments.HomeFragment;
 import com.trodev.tourtripguide.R;
 import com.trodev.tourtripguide.fragments.TourGroupFragment;
-import com.trodev.tourtripguide.WeatherFragment;
 
 import java.util.Objects;
 
@@ -111,18 +110,18 @@ public class MainActivity extends AppCompatActivity {
 
                 }
 
-                if (i == 2) {
+/*                if (i == 2) {
                     setTitle("Weather");
                     FragmentManager fragmentManager = getSupportFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.frameLayout, new WeatherFragment());
                     fragmentTransaction.commit();
 
-                    /*set all status bar, navigation bar, toolbar color*/
+                    *//*set all status bar, navigation bar, toolbar color*//*
                     smoothBottomBar.setBarBackgroundColor(Color.parseColor("#2196F3"));
                     getWindow().setNavigationBarColor(Color.parseColor("#2196F3"));
                     getWindow().setStatusBarColor(Color.parseColor("#2196F3"));
-                }
+                }*/
 
                 return false;
             }
@@ -151,14 +150,18 @@ public class MainActivity extends AppCompatActivity {
             dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
             dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
             dialog.getWindow().setGravity(Gravity.BOTTOM);
-        } else if (itemId ==R.id.menu_ticket_manager) {
+        } else if (itemId == R.id.menu_ticket_manager) {
             Toast.makeText(this, "Keep your ticket safe", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(MainActivity.this, TicketManagerActivity.class));
+
+        } else if (itemId == R.id.menu_weather) {
+            Toast.makeText(this, "Check Weather", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(MainActivity.this, WeatherActivity.class));
 
         } else if (itemId == R.id.menu_privacy) {
             startActivity(new Intent(MainActivity.this, PrivacyPolicyActivity.class));
             Toast.makeText(this, "Privacy Policy", Toast.LENGTH_SHORT).show();
-        }  else if (itemId == R.id.menu_apps) {
+        } else if (itemId == R.id.menu_apps) {
             Toast.makeText(this, "Our Apps", Toast.LENGTH_SHORT).show();
             try {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/dev?id=6580660399707616800")));

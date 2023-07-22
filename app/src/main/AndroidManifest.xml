@@ -6,6 +6,9 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION"
+        tools:ignore="CoarseFineLocation" />
 
     <application
         android:allowBackup="true"
@@ -17,10 +20,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TourTripGuide"
         tools:targetApi="31">
+
         <activity
-            android:name=".CityFinderActivity"
+            android:name=".activities.WeatherActivity"
             android:exported="false"
-            android:parentActivityName=".activities.MainActivity"/>
+            android:parentActivityName=".activities.MainActivity" />
+        <activity
+            android:name=".activities.CityFinderActivity"
+            android:exported="false"
+            android:parentActivityName=".activities.WeatherActivity" />
         <activity
             android:name=".activities.TicketManagerActivity"
             android:exported="false"
@@ -49,6 +57,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
