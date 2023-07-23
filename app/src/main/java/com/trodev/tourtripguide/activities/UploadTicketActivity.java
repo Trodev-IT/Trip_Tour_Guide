@@ -1,4 +1,4 @@
-package com.trodev.tourtripguide;
+package com.trodev.tourtripguide.activities;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -11,6 +11,7 @@ import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -19,6 +20,8 @@ import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputEditText;
+import com.trodev.tourtripguide.MyHelper;
+import com.trodev.tourtripguide.R;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -26,7 +29,6 @@ public class UploadTicketActivity extends AppCompatActivity {
 
     CircleImageView profileIv;
     TextInputEditText nameEt, ticketEt, phoneEt, dateEt, bioEt;
-
     FloatingActionButton saveBtn;
 
     private static final int STORAGE_REQUEST_CODE = 100;
@@ -41,13 +43,10 @@ public class UploadTicketActivity extends AppCompatActivity {
 
     private Uri imageUri = null;
 
-    private String name, phone, ticket, date, bio ;
+    private String name, phone, ticket, date, bio;
 
     //db helper
-    private MyHelper  dbHelper;
-
-    //actionbar
-
+    private MyHelper dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,8 +64,6 @@ public class UploadTicketActivity extends AppCompatActivity {
         //init db
         dbHelper = new MyHelper(this);
 
-
-
         cameraPermission = new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
         storagePermission = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
 
@@ -74,7 +71,7 @@ public class UploadTicketActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                imagePickDialog();
+             //   imagePickDialog();
 
             }
         });
@@ -87,35 +84,32 @@ public class UploadTicketActivity extends AppCompatActivity {
 
             }
         });
-
-
     }
 
     private void inputData() {
 
-        name = "" +nameEt.getText().toString().trim();
-        phone = ""+phoneEt.getText().toString().trim();
-        date = ""+dateEt.getText().toString().trim();
-        ticket = ""+ticketEt.getText().toString().trim();
-        bio = ""+bioEt.getText().toString().trim();
+        name = "" + nameEt.getText().toString().trim();
+        phone = "" + phoneEt.getText().toString().trim();
+        date = "" + dateEt.getText().toString().trim();
+        ticket = "" + ticketEt.getText().toString().trim();
+        bio = "" + bioEt.getText().toString().trim();
 
-        String timestamp = ""+System.currentTimeMillis();
+        String timestamp = "" + System.currentTimeMillis(); //                 "" + imageUri,
         long id = dbHelper.insertRecord(
-                ""+name,
-                ""+profileIv,
-                ""+bio,
-                ""+phone,
-                ""+ticket,
-                ""+dateEt,
-                ""+timestamp,
-                ""+timestamp
+                "" + name,
+                "" + bio,
+                "" + phone,
+                "" + ticket,
+                "" + date,
+                "" + timestamp,
+                "" + timestamp
 
         );
 
-        Toast.makeText(this, "Record added successful "+id, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Record added successful " + id, Toast.LENGTH_SHORT).show();
 
     }
-
+/*
     private void imagePickDialog() {
 
         String[] options = {"Camera", "Gallery"};
@@ -127,25 +121,18 @@ public class UploadTicketActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 //handle clicks
-                if(which == 0)
-                {
-                    if(!checkCameraPermission())
-                    {
+                if (which == 0) {
+                    if (!checkCameraPermission()) {
                         requestCameraPermission();
-                    }
-                    else
-                    {
+                    } else {
                         Toast.makeText(UploadTicketActivity.this, "Access Granted", Toast.LENGTH_SHORT).show();
                         pickFromCamera();
                     }
                 } else if (which == 1) {
 
-                    if (!checkStoragePermission())
-                    {
+                    if (!checkStoragePermission()) {
                         requestStoragePermission();
-                    }
-                    else
-                    {
+                    } else {
                         Toast.makeText(UploadTicketActivity.this, "Access Denied", Toast.LENGTH_SHORT).show();
                         pickFromGallery();
                     }
@@ -166,7 +153,7 @@ public class UploadTicketActivity extends AppCompatActivity {
         contentValues.put(MediaStore.Images.Media.TITLE, "TEMP IMAGE TITLE");
         contentValues.put(MediaStore.Images.Media.DESCRIPTION, "TEMP IMAGE DESCRIPTION");
 
-        imageUri = getApplicationContext().getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues);
+        imageUri = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues);
 
         Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
@@ -182,6 +169,58 @@ public class UploadTicketActivity extends AppCompatActivity {
 
     }
 
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+
+*//*        if (requestCode == RESULT_OK) {
+            //image picked
+            if (requestCode == STORAGE_PICK_CODE) {
+                //picked from gallery
+                //picked from gallery
+
+                imageUri = data.getData();
+                profileIv.setImageURI(imageUri);
+
+            }
+            //image picked
+            if (requestCode == CAMERA_PICK_CODE) {
+                //picked from gallery
+
+                imageUri = data.getData();
+                profileIv.setImageURI(imageUri);
+
+            }
+        }*//*
+
+        if (resultCode == RESULT_OK) {
+            if (requestCode == STORAGE_PICK_CODE) {
+                // Camera image
+                Bundle extras = data.getExtras();
+                if (extras != null) {
+                    Uri imageUri = getImageUriFromCamera(extras);
+                    displayImage(imageUri);
+                }
+            } else if (requestCode == CAMERA_PICK_CODE) {
+                // Gallery image
+                Uri imageUri = data.getData();
+                displayImage(imageUri);
+            }
+        }
+
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    private Uri getImageUriFromCamera(Bundle extras) {
+        // Get the captured image from the extras
+        return (Uri) extras.get(MediaStore.EXTRA_OUTPUT);
+    }
+
+    private void displayImage(Uri imageUri) {
+        // Display the selected image in the ImageView
+        profileIv.setImageURI(imageUri);
+    }
+
     private boolean checkStoragePermission() {
         //Log.d(TAG, "checkStoragePermission: ");
         boolean result = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
@@ -195,7 +234,7 @@ public class UploadTicketActivity extends AppCompatActivity {
     }
 
     private boolean checkCameraPermission() {
-       // Log.d(TAG, "checkCameraPermission: ");
+        // Log.d(TAG, "checkCameraPermission: ");
 
         boolean cameraResult = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED;
         boolean storageResult = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
@@ -205,7 +244,7 @@ public class UploadTicketActivity extends AppCompatActivity {
     }
 
     private void requestCameraPermission() {
-       // Log.d(TAG, "requestCameraPermission: ");
+        // Log.d(TAG, "requestCameraPermission: ");
         requestPermissions(cameraPermission, CAMERA_REQUEST_CODE);
     }
 
@@ -255,33 +294,8 @@ public class UploadTicketActivity extends AppCompatActivity {
             break;
 
         }
-    }
+    }*/
 
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-
-        if(requestCode == RESULT_OK)
-        {
-            //image picked
-            if(requestCode == STORAGE_PICK_CODE)
-            {
-                //picked from gallery
-                imageUri = data.getData();
-                profileIv.setImageURI(imageUri);
-
-            }
-            //image picked
-            if(requestCode == CAMERA_PICK_CODE)
-            {
-                //picked from gallery
-                imageUri = data.getData();
-                profileIv.setImageURI(imageUri);
-
-            }
-        }
-        super.onActivityResult(requestCode, resultCode, data);
-    }
 
     @Override
     public boolean onSupportNavigateUp() {
