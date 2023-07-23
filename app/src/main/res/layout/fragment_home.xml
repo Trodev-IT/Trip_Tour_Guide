@@ -170,8 +170,8 @@
 
 
                         <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
                             android:layout_gravity="center"
                             android:scaleType="fitCenter"
                             android:src="@drawable/india" />
@@ -207,11 +207,11 @@
 
 
                         <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
                             android:layout_gravity="center"
                             android:scaleType="fitXY"
-                            android:src="@drawable/ahsan_monjil" />
+                            android:src="@drawable/nepal" />
 
 
                     </com.google.android.material.card.MaterialCardView>
@@ -244,11 +244,11 @@
 
 
                         <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
                             android:layout_gravity="center"
                             android:scaleType="fitXY"
-                            android:src="@drawable/ahsan_monjil" />
+                            android:src="@drawable/pakistan" />
 
 
                     </com.google.android.material.card.MaterialCardView>
@@ -280,11 +280,11 @@
 
 
                         <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
                             android:layout_gravity="center"
                             android:scaleType="fitCenter"
-                            android:src="@drawable/india" />
+                            android:src="@drawable/france" />
 
 
                     </com.google.android.material.card.MaterialCardView>
@@ -317,11 +317,11 @@
 
 
                         <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
                             android:layout_gravity="center"
                             android:scaleType="fitXY"
-                            android:src="@drawable/ahsan_monjil" />
+                            android:src="@drawable/russia" />
 
 
                     </com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UploadTicketActivity">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:id="@+id/profileIv"
+        android:src="@drawable/ic_camera"
+        app:civ_border_color="@color/app_color"
+        app:civ_border_width="2dp"
+        />
+
+    <!--Input Text for Notice-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/placeName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_below="@+id/profileIv"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/zilla_slab_semi_bold"
+            android:hint="Journey By Place"
+            android:textColor="@color/black"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Input Text for Notice-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ticketName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_below="@+id/placeName"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ticketEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/zilla_slab_semi_bold"
+            android:hint="Ticket Number"
+            android:textColor="@color/black"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Input Text for Notice-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/vehicleNumber"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_below="@+id/ticketName"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phoneEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/zilla_slab_semi_bold"
+            android:hint="Vehicle Manager Number"
+            android:textColor="@color/black"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Input Text for Notice-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/journeyDate"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_below="@+id/vehicleNumber"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dateEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/zilla_slab_semi_bold"
+            android:hint="Journey Date"
+            android:textColor="@color/black"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--Input Text for Notice-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/sortDes"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_below="@+id/journeyDate"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/bioEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/zilla_slab_semi_bold"
+            android:hint="Short bio of journey"
+            android:inputType="textCapSentences|textMultiLine"
+            android:textColor="@color/black"
+            android:minHeight="100dp"
+            android:gravity="start"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_add"
+        />
+
+
+</RelativeLayout>
