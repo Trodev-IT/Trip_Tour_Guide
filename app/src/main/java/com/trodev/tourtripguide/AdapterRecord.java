@@ -52,26 +52,18 @@ public class AdapterRecord extends RecyclerView.Adapter<AdapterRecord.HolderReco
 
         /*---------------------------------------------------*/
         //set data to views
-        holder.nameTv.setText("Place Name: " + name);
-        holder.phoneTv.setText("Manager Number: " + phone);
-        holder.dateTv.setText("Journey Date: " + date);
-        holder.ticketTv.setText("Ticket Number: " + ticket);
-       // holder.profileIv.setImageURI(Uri.parse(image));
+        holder.nameTv.setText("Journey by place: " + name);
+        holder.phoneTv.setText("☎ Manager Number: " + phone);
+        holder.dateTv.setText("📅 Travel Date: " + date);
+        holder.ticketTv.setText("🎫 Ticket Number: " + ticket);
+        // holder.profileIv.setImageURI(Uri.parse(image));
 
         /*----------------------------------------------------*/
         //handle item click
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "Journey by place "+name, Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        //handle more button click
-        holder.moreBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
+                Toast.makeText(context, "Journey by place " + name, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -95,7 +87,7 @@ public class AdapterRecord extends RecyclerView.Adapter<AdapterRecord.HolderReco
             phoneTv = itemView.findViewById(R.id.phoneTv);
             ticketTv = itemView.findViewById(R.id.ticketTv);
             dateTv = itemView.findViewById(R.id.dateTv);
-            moreBtn = itemView.findViewById(R.id.moreBtn);
+            // moreBtn = itemView.findViewById(R.id.moreBtn);
 
         }
     }

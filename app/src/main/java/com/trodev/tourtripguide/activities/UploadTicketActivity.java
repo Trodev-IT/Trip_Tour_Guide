@@ -53,7 +53,7 @@ public class UploadTicketActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload_ticket);
 
-        profileIv = findViewById(R.id.profileIv);
+     //   profileIv = findViewById(R.id.profileIv);
         nameEt = findViewById(R.id.nameEt);
         ticketEt = findViewById(R.id.ticketEt);
         phoneEt = findViewById(R.id.phoneEt);
