@@ -53,6 +53,9 @@ public class UploadTicketActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload_ticket);
 
+        getSupportActionBar().setTitle("Save Tickets");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
      //   profileIv = findViewById(R.id.profileIv);
         nameEt = findViewById(R.id.nameEt);
         ticketEt = findViewById(R.id.ticketEt);
@@ -67,14 +70,14 @@ public class UploadTicketActivity extends AppCompatActivity {
         cameraPermission = new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
         storagePermission = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
 
-        profileIv.setOnClickListener(new View.OnClickListener() {
+/*        profileIv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
              //   imagePickDialog();
 
             }
-        });
+        });*/
 
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override

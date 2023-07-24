@@ -5,9 +5,12 @@
     <item
         android:id="@+id/menu_ticket_manager"
         android:icon="@drawable/ic_ticket"
-        android:title="Ticket Manager"
-        app:tint="@color/app_color"
-        />
+        android:title="Ticket Manager" />
+
+    <item
+        android:id="@+id/menu_nearbyplace"
+        android:icon="@drawable/ic_maps"
+        android:title="Near by places" />
 
     <item
         android:id="@+id/menu_weather"

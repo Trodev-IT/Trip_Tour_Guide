@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.trodev.tourtripguide.activities.UploadTicketActivity;
 
@@ -47,21 +48,20 @@ public class TicketManagerActivity extends AppCompatActivity {
 
     private void loadREcords() {
 
-        AdapterRecord adapterRecord = new AdapterRecord(TicketManagerActivity.this,
-                dbHelper.getAllRecords(Constants.C_ADDED_TIMESTAMP + "  DESC"));
+        AdapterRecord adapterRecord = new AdapterRecord(TicketManagerActivity.this, dbHelper.getAllRecords(Constants.C_ADDED_TIMESTAMP + "  DESC"));
 
         recordRv.setAdapter(adapterRecord);
 
     }
 
 
-    private void searchRecords(String query)
-    {
-        AdapterRecord adapterRecord = new AdapterRecord(TicketManagerActivity.this,
-                dbHelper.searchAllRecords(query));
+    private void searchRecords(String query) {
+
+        AdapterRecord adapterRecord = new AdapterRecord(TicketManagerActivity.this, dbHelper.searchAllRecords(query));
 
         recordRv.setAdapter(adapterRecord);
-        getSupportActionBar().setSubtitle("Total: "+dbHelper.getRecordsCount());
+        getSupportActionBar().setSubtitle("Total: " + dbHelper.getRecordsCount());
+
     }
 
     @Override
