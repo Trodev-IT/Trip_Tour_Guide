@@ -56,7 +56,7 @@ public class UploadTicketActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Save Tickets");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-     //   profileIv = findViewById(R.id.profileIv);
+        //   profileIv = findViewById(R.id.profileIv);
         nameEt = findViewById(R.id.nameEt);
         ticketEt = findViewById(R.id.ticketEt);
         phoneEt = findViewById(R.id.phoneEt);
@@ -109,7 +109,7 @@ public class UploadTicketActivity extends AppCompatActivity {
 
         );
 
-        Toast.makeText(this, "Record added successful " + id, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Ticket added successful\nYour ticket serial is: " + id, Toast.LENGTH_SHORT).show();
 
     }
 /*

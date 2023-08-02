@@ -118,6 +118,8 @@
                 android:layout_marginEnd="10dp"
                 android:drawablePadding="5dp"
                 android:text="Manager Number"
+                android:textIsSelectable="true"
+                android:fontFamily="@font/poppins_regular"
                 android:textSize="13sp"
                 android:textStyle="bold" />
 
@@ -129,6 +131,7 @@
                 android:layout_marginEnd="10dp"
                 android:layout_weight="1"
                 android:drawablePadding="5dp"
+                android:fontFamily="@font/poppins_regular"
                 android:text="Date"
                 android:textSize="13sp"
                 android:textStyle="bold" />
@@ -142,6 +145,7 @@
             android:layout_below="@+id/numberLl"
             android:layout_alignStart="@+id/nameTv"
             android:layout_marginEnd="10dp"
+            android:fontFamily="@font/poppins_regular"
             android:drawablePadding="5dp"
             android:text="🎫 Ticket Number"
             android:textSize="12sp"

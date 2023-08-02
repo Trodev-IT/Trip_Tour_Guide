@@ -7,5 +7,4 @@
     android:orientation="vertical"
     tools:context=".activities.NearbyPlaceActivity">
 
-
 </LinearLayout>

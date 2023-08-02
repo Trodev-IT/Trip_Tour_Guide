@@ -28,17 +28,15 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-
         >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/nameEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/zilla_slab_semi_bold"
+            android:fontFamily="@font/poppins_regular"
             android:hint="Journey By Place"
             android:textColor="@color/black"
-
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -57,10 +55,9 @@
             android:id="@+id/ticketEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/zilla_slab_semi_bold"
+            android:fontFamily="@font/poppins_regular"
             android:hint="Ticket Number"
             android:textColor="@color/black"
-
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -79,10 +76,9 @@
             android:id="@+id/phoneEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/zilla_slab_semi_bold"
+            android:fontFamily="@font/poppins_regular"
             android:hint="Vehicle Manager Number"
             android:textColor="@color/black"
-
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -101,10 +97,9 @@
             android:id="@+id/dateEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/zilla_slab_semi_bold"
+            android:fontFamily="@font/poppins_regular"
             android:hint="Journey Date"
             android:textColor="@color/black"
-
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -124,13 +119,12 @@
             android:id="@+id/bioEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/zilla_slab_semi_bold"
+            android:fontFamily="@font/poppins_regular"
             android:gravity="start"
             android:hint="Short bio of journey"
             android:inputType="textCapSentences|textMultiLine"
             android:minHeight="100dp"
             android:textColor="@color/black"
-
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -142,8 +136,11 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_margin="10dp"
-        android:src="@drawable/ic_add" />
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_dones" />
 
 
 </RelativeLayout>

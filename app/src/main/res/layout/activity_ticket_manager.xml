@@ -9,13 +9,14 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recordRv"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/row_record"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="5dp"
-
-        />
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/row_record" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addRecord"
@@ -24,7 +25,6 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_margin="10dp"
-        android:layout_alignParentRight="true"
         android:src="@drawable/ic_add"
         />
 
