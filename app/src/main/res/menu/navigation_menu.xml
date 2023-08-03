@@ -7,10 +7,15 @@
         android:icon="@drawable/ic_ticket"
         android:title="Ticket Manager" />
 
-    <item
+<!--    <item
         android:id="@+id/menu_nearbyplace"
         android:icon="@drawable/ic_maps"
-        android:title="Near by places" />
+        android:title="Near by places" />-->
+
+        <item
+        android:id="@+id/menu_notification"
+        android:icon="@drawable/ic_notification"
+        android:title="Notification" />
 
     <item
         android:id="@+id/menu_weather"

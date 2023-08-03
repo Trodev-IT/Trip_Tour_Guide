@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="none"
     tools:context=".fragments.HomeFragment">
 
     <LinearLayout
@@ -28,10 +29,12 @@
                 android:layout_margin="10dp"
                 android:orientation="horizontal">
 
-                <ImageView
+                <com.airbnb.lottie.LottieAnimationView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/card" />
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/trip" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -258,7 +261,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:fontFamily="@font/mulish_semibold"
-                        android:text="Pakisthan"
+                        android:text="Pakistan"
                         android:textColor="@color/black" />
 
                 </LinearLayout>
@@ -278,14 +281,12 @@
                         app:cardCornerRadius="5dp"
                         app:cardElevation="3dp">
 
-
                         <ImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:layout_gravity="center"
                             android:scaleType="fitCenter"
                             android:src="@drawable/france" />
-
 
                     </com.google.android.material.card.MaterialCardView>
 
@@ -423,14 +424,16 @@
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
-                        <ImageView
-                            android:layout_width="70dp"
-                            android:layout_height="120dp"
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
                             android:layout_marginStart="320dp"
                             android:layout_marginTop="-5dp"
                             android:layout_marginRight="2dp"
                             android:layout_marginBottom="80dp"
-                            android:src="@drawable/splash_icon" />
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/trip" />
 
                     </RelativeLayout>
 
@@ -478,14 +481,16 @@
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
-                        <ImageView
-                            android:layout_width="70dp"
-                            android:layout_height="120dp"
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
                             android:layout_marginStart="320dp"
                             android:layout_marginTop="-5dp"
                             android:layout_marginRight="2dp"
                             android:layout_marginBottom="80dp"
-                            android:src="@drawable/splash_icon" />
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/trip" />
 
                     </RelativeLayout>
 
@@ -532,14 +537,16 @@
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
-                        <ImageView
-                            android:layout_width="70dp"
-                            android:layout_height="120dp"
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
                             android:layout_marginStart="320dp"
                             android:layout_marginTop="-5dp"
                             android:layout_marginRight="2dp"
                             android:layout_marginBottom="80dp"
-                            android:src="@drawable/splash_icon" />
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/trip" />
 
                     </RelativeLayout>
 
@@ -587,14 +594,16 @@
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
-                        <ImageView
-                            android:layout_width="70dp"
-                            android:layout_height="120dp"
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
                             android:layout_marginStart="320dp"
                             android:layout_marginTop="-5dp"
                             android:layout_marginRight="2dp"
                             android:layout_marginBottom="80dp"
-                            android:src="@drawable/splash_icon" />
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/trip" />
 
                     </RelativeLayout>
 
@@ -641,14 +650,16 @@
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
-                        <ImageView
-                            android:layout_width="70dp"
-                            android:layout_height="120dp"
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
                             android:layout_marginStart="320dp"
                             android:layout_marginTop="-5dp"
                             android:layout_marginRight="2dp"
                             android:layout_marginBottom="80dp"
-                            android:src="@drawable/splash_icon" />
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/trip" />
 
                     </RelativeLayout>
 
@@ -696,14 +707,16 @@
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
-                        <ImageView
-                            android:layout_width="70dp"
-                            android:layout_height="120dp"
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
                             android:layout_marginStart="320dp"
                             android:layout_marginTop="-5dp"
                             android:layout_marginRight="2dp"
                             android:layout_marginBottom="80dp"
-                            android:src="@drawable/splash_icon" />
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/trip" />
 
                     </RelativeLayout>
 

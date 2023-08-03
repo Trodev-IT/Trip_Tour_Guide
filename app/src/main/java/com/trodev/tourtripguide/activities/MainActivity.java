@@ -154,9 +154,9 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Keep your ticket safe", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(MainActivity.this, TicketManagerActivity.class));
 
-        } else if (itemId == R.id.menu_nearbyplace) {
-            Toast.makeText(this, "Near by places", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(MainActivity.this, NearbyPlaceActivity.class));
+        } else if (itemId == R.id.menu_notification) {
+            Toast.makeText(this, "Notification", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(MainActivity.this, NotificationActivity.class));
         } else if (itemId == R.id.menu_weather) {
             Toast.makeText(this, "Check Weather", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(MainActivity.this, WeatherActivity.class));
