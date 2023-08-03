@@ -22,7 +22,7 @@ import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.trodev.tourtripguide.R;
-import com.trodev.tourtripguide.WeatherData;
+import com.trodev.tourtripguide.models.WeatherData;
 
 import org.json.JSONObject;
 

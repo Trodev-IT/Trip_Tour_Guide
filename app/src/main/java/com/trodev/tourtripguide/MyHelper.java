@@ -8,6 +8,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import com.trodev.tourtripguide.models.ModelRecords;
+
 import java.util.ArrayList;
 
 public class MyHelper extends SQLiteOpenHelper {

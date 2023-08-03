@@ -1,4 +1,4 @@
-package com.trodev.tourtripguide;
+package com.trodev.tourtripguide.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -13,6 +13,10 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.trodev.tourtripguide.Constants;
+import com.trodev.tourtripguide.MyHelper;
+import com.trodev.tourtripguide.R;
+import com.trodev.tourtripguide.adapters.AdapterRecord;
 
 public class TicketManagerActivity extends AppCompatActivity {
     FloatingActionButton addRecord;
@@ -79,7 +83,7 @@ public class TicketManagerActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onResume() {
+    public void onResume() {
         super.onResume();
         loadREcords(currentOrderByStatus);
     }

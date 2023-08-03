@@ -1,4 +1,4 @@
-package com.trodev.tourtripguide;
+package com.trodev.tourtripguide.models;
 
 import org.json.JSONException;
 import org.json.JSONObject;

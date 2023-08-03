@@ -1,4 +1,4 @@
-package com.trodev.tourtripguide;
+package com.trodev.tourtripguide.activities;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
