@@ -1,4 +1,4 @@
-package com.trodev.tourtripguide.activities;
+package com.trodev.tourtripguide;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,6 +15,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.system.StructTimespec;
 import android.view.View;
 import android.widget.Toast;
 
@@ -43,8 +44,8 @@ public class UploadTicketActivity extends AppCompatActivity {
 
     private Uri imageUri = null;
 
-    private String name, phone, ticket, date, bio;
-
+    private String id, name, phone, ticket, date, bio, addedTime, updatedTime;
+    private boolean isEditMode = false;
     //db helper
     private MyHelper dbHelper;
 
@@ -63,6 +64,36 @@ public class UploadTicketActivity extends AppCompatActivity {
         dateEt = findViewById(R.id.dateEt);
         bioEt = findViewById(R.id.bioEt);
         saveBtn = findViewById(R.id.saveBtn);
+
+        // get data from adapter
+        isEditMode = getIntent().getBooleanExtra("isEditMode", false);
+
+        //set data to views
+        if(isEditMode)
+        {
+            getSupportActionBar().setTitle("Update data");
+            //update data
+            id = getIntent().getStringExtra("ID");
+            name = getIntent().getStringExtra("NAME");
+            phone = getIntent().getStringExtra("PHONE");
+            ticket = getIntent().getStringExtra("TICKET");
+            date = getIntent().getStringExtra("DATE");
+            bio = getIntent().getStringExtra("BIO");
+            addedTime = getIntent().getStringExtra("ADDED_TIME");
+            updatedTime = getIntent().getStringExtra("UPDATED_TIME");
+
+            //set data to views
+            nameEt.setText(name);
+            phoneEt.setText(phone);
+            ticketEt.setText(ticket);
+            dateEt.setText(date);
+            bioEt.setText(bio);
+        }
+        else
+        {
+            //add data
+            getSupportActionBar().setTitle("Add Ticket Information");
+        }
 
         //init db
         dbHelper = new MyHelper(this);
@@ -97,19 +128,41 @@ public class UploadTicketActivity extends AppCompatActivity {
         ticket = "" + ticketEt.getText().toString().trim();
         bio = "" + bioEt.getText().toString().trim();
 
-        String timestamp = "" + System.currentTimeMillis(); //                 "" + imageUri,
-        long id = dbHelper.insertRecord(
-                "" + name,
-                "" + bio,
-                "" + phone,
-                "" + ticket,
-                "" + date,
-                "" + timestamp,
-                "" + timestamp
+        if(isEditMode)
+        {
+            //update data
+            String timestamp = "" + System.currentTimeMillis();
+            dbHelper.updateRecord(
+                    ""+id,
+                    ""+name,
+                    ""+bio,
+                    ""+phone,
+                    ""+ticket,
+                    ""+date,
+                    ""+ timestamp,
+                    ""+ timestamp
+            );
 
-        );
+            Toast.makeText(this, "Update successful", Toast.LENGTH_SHORT).show();
 
-        Toast.makeText(this, "Ticket added successful\nYour ticket serial is: " + id, Toast.LENGTH_SHORT).show();
+        }else
+        {
+            String timestamp = "" + System.currentTimeMillis(); //                 "" + imageUri,
+            long id = dbHelper.insertRecord(
+                    "" + name,
+                    "" + bio,
+                    "" + phone,
+                    "" + ticket,
+                    "" + date,
+                    "" + timestamp,
+                    "" + timestamp
+
+            );
+
+            Toast.makeText(this, "Ticket added successful\nYour ticket serial is: " + id, Toast.LENGTH_SHORT).show();
+        }
+
+
 
     }
 /*

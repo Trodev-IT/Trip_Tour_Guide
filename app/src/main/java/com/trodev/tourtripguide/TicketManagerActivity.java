@@ -2,17 +2,14 @@ package com.trodev.tourtripguide;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.trodev.tourtripguide.activities.UploadTicketActivity;
 
 public class TicketManagerActivity extends AppCompatActivity {
     FloatingActionButton addRecord;
@@ -40,7 +37,11 @@ public class TicketManagerActivity extends AppCompatActivity {
         addRecord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(TicketManagerActivity.this, UploadTicketActivity.class));
+
+                Intent intent = new Intent(TicketManagerActivity.this, UploadTicketActivity.class);
+                intent.putExtra("isEditMode", false);
+                startActivity(intent);
+
             }
         });
 

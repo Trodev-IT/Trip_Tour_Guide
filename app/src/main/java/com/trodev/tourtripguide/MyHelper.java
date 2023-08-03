@@ -60,6 +60,31 @@ public class MyHelper extends SQLiteOpenHelper {
 
     }
 
+    //insert record
+    public void updateRecord(String id, String name, String bio, String phone,
+                             String ticket, String date, String addedTime, String updateTime) {   //String image,
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+
+        //id will be inserted automatically
+        values.put(Constants.C_NAME, name);
+        // values.put(Constants.C_IMAGE, image);
+        values.put(Constants.C_BIO, bio);
+        values.put(Constants.C_PHONE, phone);
+        values.put(Constants.C_TICKET, ticket);
+        values.put(Constants.C_DATE, date);
+        values.put(Constants.C_ADDED_TIMESTAMP, addedTime);
+        values.put(Constants.C_UPDATE_TIMESTAMP, updateTime);
+
+
+        db.update(Constants.TABLE_NAME, values, Constants.C_ID +" = ?",  new String[]{id});
+
+        //close db
+        db.close();
+
+    }
+
     //get all data
     public ArrayList<ModelRecords> getAllRecords(String orderBy)
     {

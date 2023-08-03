@@ -152,16 +152,16 @@
             android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/imgDelete"
+            android:id="@+id/moreBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_marginVertical="10dp"
             android:layout_marginEnd="10dp"
-            android:src="@drawable/ic_delete"
+            android:src="@drawable/ic_more"
             app:tint="@color/app_color" />
 
-        <ImageView
+<!--        <ImageView
             android:id="@+id/imgEdit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -169,7 +169,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="10dp"
             android:src="@drawable/ic_edit"
-            app:tint="@color/app_color" />
+            app:tint="@color/app_color" />-->
 
     </RelativeLayout>
 

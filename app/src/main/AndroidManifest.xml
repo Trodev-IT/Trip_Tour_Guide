@@ -24,6 +24,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TourTripGuide"
         tools:targetApi="31">
+        <activity
+            android:name=".AddUpdateRecordActivity"
+            android:exported="false" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -34,7 +37,7 @@
             android:exported="false"
             android:parentActivityName=".activities.MainActivity" />
         <activity
-            android:name=".activities.UploadTicketActivity"
+            android:name=".UploadTicketActivity"
             android:exported="false"
             android:parentActivityName=".TicketManagerActivity" />
         <activity
