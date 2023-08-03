@@ -26,9 +26,14 @@ public class AdapterRecord extends RecyclerView.Adapter<AdapterRecord.HolderReco
     Context context;
     ArrayList<ModelRecords> recordsList;
 
+    //db helper
+    MyHelper dbHelper;
+
     public AdapterRecord(Context context, ArrayList<ModelRecords> recordsList) {
         this.context = context;
         this.recordsList = recordsList;
+
+        dbHelper = new MyHelper(context);
     }
 
     @NonNull
@@ -77,15 +82,15 @@ public class AdapterRecord extends RecyclerView.Adapter<AdapterRecord.HolderReco
             public void onClick(View v) {
 
                 showMoreDialog(
-                        ""+position,
-                        ""+id,
-                        ""+name,
-                        ""+phone,
-                        ""+date,
-                        ""+ticket,
-                        ""+bio,
-                        ""+addedTime,
-                        ""+updateTime
+                        "" + position,
+                        "" + id,
+                        "" + name,
+                        "" + phone,
+                        "" + date,
+                        "" + ticket,
+                        "" + bio,
+                        "" + addedTime,
+                        "" + updateTime
                 );
 
             }
@@ -98,16 +103,16 @@ public class AdapterRecord extends RecyclerView.Adapter<AdapterRecord.HolderReco
         // options to display
         String[] options = {"Edit", "Delete"};
         //dialog
-        AlertDialog.Builder  builder = new AlertDialog.Builder(context);
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
         //add items to dialog
         builder.setItems(options, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 //handle click
-                if(which == 0)
-                {
+                if (which == 0) {
                     Intent intent = new Intent(context, UploadTicketActivity.class);
-                    intent.putExtra("ID", id);;
+                    intent.putExtra("ID", id);
+                    ;
                     intent.putExtra("NAME", name);
                     intent.putExtra("PHONE", phone);
                     intent.putExtra("DATE", date);
@@ -117,10 +122,10 @@ public class AdapterRecord extends RecyclerView.Adapter<AdapterRecord.HolderReco
                     intent.putExtra("UPDATED_TIME", updatedTime);
                     intent.putExtra("isEditMode", true);
                     context.startActivity(intent);
-                }
-                else if(which == 1)
-                {
-
+                } else if (which == 1) {
+                    dbHelper.deleteData(id);
+                    //refresh record by calling activities onResume method
+                    ((TicketManagerActivity) context).onResume();
                 }
 
             }
