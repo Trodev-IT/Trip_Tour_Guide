@@ -24,7 +24,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.trodev.tourtripguide.ConnectionRecevier;
+import com.trodev.tourtripguide.ConnectionReceiver;
 import com.trodev.tourtripguide.R;
 import com.trodev.tourtripguide.activities.DhakaActivity;
 
@@ -49,7 +49,7 @@ public class HomeFragment extends Fragment {
         dhakaLl = view.findViewById(R.id.dhakaLl);
         dhakaCv = view.findViewById(R.id.dhakaCv);
 
-        broadcastReceiver = new ConnectionRecevier();
+        broadcastReceiver = new ConnectionReceiver();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             registerNetworkBroadcast();
         }

@@ -31,33 +31,34 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/kalpurush"
                 android:gravity="center"
                 android:text="আপনি যে স্থানটির আবহাওয়া তথ্য জানতে চাচ্ছেন সেই জায়গাটির নাম লিখুন"
                 android:textColor="@color/black"
-                android:layout_marginTop="10dp"
-                android:textStyle="bold"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
     <EditText
+        android:id="@+id/searchCity"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:hint="Enter City Name"
         android:layout_marginLeft="30dp"
-        android:textSize="20sp"
+        android:layout_marginRight="30dp"
         android:background="@drawable/edittext_design"
-        android:textColor="@color/black"
-        android:imeOptions="actionGo"
-        android:id="@+id/searchCity"
-        android:inputType="textAutoCorrect"
+        android:fontFamily="@font/poppins_semibold"
         android:gravity="center_vertical|center_horizontal"
-        android:layout_marginRight="30dp">
+        android:hint="Enter City Name"
+        android:imeOptions="actionGo"
+        android:inputType="textAutoCorrect"
+        android:textColor="@color/black"
+        android:textSize="20sp">
 
     </EditText>
 
