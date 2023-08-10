@@ -24,7 +24,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.trodev.tourtripguide.ConnectionRecevier;
+import com.trodev.tourtripguide.ConnectionReceiver;
 import com.trodev.tourtripguide.R;
 import com.trodev.tourtripguide.activities.DhakaActivity;
 
@@ -52,6 +52,7 @@ public class HomeFragment extends Fragment {
         franceLl = view.findViewById(R.id.franceLl);
         pakistanLl = view.findViewById(R.id.pakistanLl);
 
+<<<<<<< HEAD
         /*init material card view*/
         dhakaCv = view.findViewById(R.id.dhakaCv);
         rajCv = view.findViewById(R.id.rajCv);
@@ -62,6 +63,9 @@ public class HomeFragment extends Fragment {
 
         /*no internet connection dialog*/
         broadcastReceiver = new ConnectionRecevier();
+=======
+        broadcastReceiver = new ConnectionReceiver();
+>>>>>>> 7cd8ee2ac9d352381f15e80e375989adc131b18c
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             registerNetworkBroadcast();
         }

@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 
-public class ConnectionRecevier extends BroadcastReceiver {
+public class ConnectionReceiver extends BroadcastReceiver {
 
     Context context;
 
