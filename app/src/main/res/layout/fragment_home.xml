@@ -119,7 +119,7 @@
                 android:weightSum="3">
 
                 <LinearLayout
-                    android:id="@+id/dhakaLl"
+                    android:id="@+id/banglaLl"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -157,6 +157,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/indiaLl"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -194,6 +195,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/nepalLl"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -231,6 +233,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/pakistanLl"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -267,6 +270,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/franceLl"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -302,6 +306,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/russiaLl"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -447,6 +452,7 @@
                 android:layout_height="wrap_content">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/rajCv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -454,7 +460,6 @@
                     app:cardElevation="3dp">
 
                     <RelativeLayout
-
                         android:layout_width="match_parent"
                         android:layout_height="130dp"
                         android:background="#2196F3">
@@ -504,6 +509,7 @@
                 android:layout_height="wrap_content">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/sylhetCv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -560,6 +566,7 @@
                 android:layout_height="wrap_content">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/chittagongCv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -617,6 +624,7 @@
                 android:layout_height="wrap_content">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/khulnaCv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -673,6 +681,7 @@
                 android:layout_height="wrap_content">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/barishalCv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"

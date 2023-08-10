@@ -28,10 +28,9 @@ import com.trodev.tourtripguide.ConnectionRecevier;
 import com.trodev.tourtripguide.R;
 import com.trodev.tourtripguide.activities.DhakaActivity;
 
-
 public class HomeFragment extends Fragment {
-    LinearLayout dhakaLl;
-    CardView dhakaCv;
+    LinearLayout banglaLl, indiaLl, russiaLl,  nepalLl, franceLl, pakistanLl ;
+    CardView dhakaCv, rajCv, sylhetCv, chittagongCv, khulnaCv, barishalCv ;
     BroadcastReceiver broadcastReceiver;
 
     public HomeFragment() {
@@ -45,10 +44,23 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        /*init views*/
-        dhakaLl = view.findViewById(R.id.dhakaLl);
-        dhakaCv = view.findViewById(R.id.dhakaCv);
+        /*init views linear layout*/
+        banglaLl = view.findViewById(R.id.banglaLl);
+        indiaLl = view.findViewById(R.id.indiaLl);
+        russiaLl = view.findViewById(R.id.russiaLl);
+        nepalLl = view.findViewById(R.id.nepalLl);
+        franceLl = view.findViewById(R.id.franceLl);
+        pakistanLl = view.findViewById(R.id.pakistanLl);
 
+        /*init material card view*/
+        dhakaCv = view.findViewById(R.id.dhakaCv);
+        rajCv = view.findViewById(R.id.rajCv);
+        sylhetCv = view.findViewById(R.id.sylhetCv);
+        chittagongCv = view.findViewById(R.id.chittagongCv);
+        khulnaCv = view.findViewById(R.id.khulnaCv);
+        barishalCv = view.findViewById(R.id.barishalCv);
+
+        /*no internet connection dialog*/
         broadcastReceiver = new ConnectionRecevier();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             registerNetworkBroadcast();
