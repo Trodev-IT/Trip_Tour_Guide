@@ -32,6 +32,7 @@ import me.ibrahimsn.lib.OnItemSelectedListener;
 import me.ibrahimsn.lib.SmoothBottomBar;
 
 public class MainActivity extends AppCompatActivity {
+
     private DrawerLayout drawerLayout;
     SmoothBottomBar smoothBottomBar;
     private ActionBarDrawerToggle toggle;

@@ -23,10 +23,11 @@ import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.trodev.tourtripguide.R;
 import com.trodev.tourtripguide.models.WeatherData;
+import cz.msebera.android.httpclient.Header;
 
 import org.json.JSONObject;
 
-import cz.msebera.android.httpclient.Header;
+
 
 public class WeatherActivity extends AppCompatActivity {
 
